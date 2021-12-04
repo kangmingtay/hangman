@@ -4,12 +4,6 @@ defmodule Hangman do
   alias Hangman.Type
 
   @opaque game :: Game.t 
-  @type tally :: %{
-    turns_left: integer, 
-    game_state: Type.state,
-    letters: list(String.t),
-    used: list(String.t), 
-  }
 
   @spec new_game() :: game
   defdelegate new_game, to: Game 
